@@ -34,7 +34,7 @@ tagCreator('header', 'header', 'body');
 
 //create the header block
 tagCreator('img', 'logo', '.header')
-document.querySelector('.logo').src = '/assets/images/logo.jpg'
+document.querySelector('.logo').src = './assets/images/logo.jpg'
 tagCreator('h1', 'h1', '.header')
 document.querySelector('.h1').textContent = 'Welcome to the book shop!'
 
