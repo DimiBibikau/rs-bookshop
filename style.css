@@ -19,8 +19,9 @@
 .book-catalog {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     width: 90%;
-    height: 800px;
+    height: 100%;
     padding: 20px;
     background-color: beige;
     border: solid 3px #444444;
@@ -33,7 +34,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    width: 300px;
+    width: 200px;
     padding: 10px;
 
     background-color: burlywood;
@@ -134,4 +135,9 @@
 
     height: 100%;
     width: 75%;
+    padding-bottom: 25px;
+}
+
+.form-complete-button {
+    padding: 10px;
 }
