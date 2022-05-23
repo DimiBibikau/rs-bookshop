@@ -1,5 +1,5 @@
 const renderBookShop = () => {
-
+    
     const booksJSON = [{
         "author": "Douglas Crockford",
         "imageLink": "./assets/images/JavaScript-The-Good-Parts.jpg",
@@ -98,9 +98,11 @@ const renderBookShop = () => {
     tagCreator('h2', 'shopping-cart-total', '.shopping-cart');  
     document.querySelector('.shopping-cart-total').textContent = 'This is how much they cost:';
     //create the order button
-    tagCreator('button', 'button-confirm-order', '.shopping-cart');  
-    document.querySelector('.button-confirm-order').textContent = 'Confirm order';
-    tagCreator('include', 'shopping-cart-form', '.shopping-cart');
+    // tagCreator('button', 'button-confirm-order', '.shopping-cart');  
+    // document.querySelector('.button-confirm-order').textContent = 'Confirm order';
+    tagCreator('a', 'shopping-cart-form', '.shopping-cart');
+    document.querySelector('.shopping-cart-form').href = './form.html';
+    document.querySelector('.shopping-cart-form').textContent = 'Confirm order';
     
     //create the footer
     tagCreator('footer', 'footer', 'body')
@@ -157,11 +159,11 @@ const renderBookShop = () => {
     }
     
     //make the button create the checkout form
-    const buttonCheckout = document.querySelectorAll('.button-confirm-order');
-    buttonCheckout.addEventListener('click', () => {
-        const formLink = './form.html'
-        document.querySelectorAll('.shopping-cart-form').src = formLink;
-    })
+    // const buttonCheckout = document.querySelectorAll('.button-confirm-order');
+    // buttonCheckout.addEventListener('click', () => {
+    //     const formLink = './form.html'
+    //     document.querySelectorAll('.shopping-cart-form').src = formLink;
+    // })
     
     
     //form management
