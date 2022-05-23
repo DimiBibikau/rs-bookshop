@@ -16,7 +16,7 @@ const booksJSON = [
     },
     {
       "author": "David Flanagan",
-      "imageLink": "../assets/images/start-book-cover.jpg",
+      "imageLink": "./assets/images/start-book-cover.jpg",
       "title": "JavaScript: The Definitive Guide",
       "price": 40,
       "description": "This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today's Web 2.0 applications. This book is both an example-driven programmer's guide and a keep-on-your-desk reference, with new chapters that explain everything you need to know to get the most out of JavaScript"
