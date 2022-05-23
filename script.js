@@ -2,21 +2,21 @@
 const booksJSON = [
     {
     "author": "Douglas Crockford",
-    "imageLink": "/assets/images/start-book-cover.jpg",
+    "imageLink": "./assets/images/start-book-cover.jpg",
     "title": "JavaScript: The Good Parts: The Good Parts",
     "price": 30,
     "description": "With JavaScript: The Good Parts, you'll discover a beautiful, elegant, lightweight and highly expressive language that lets you create effective code, whether you're managing object libraries or just trying to get Ajax to run fast. If you develop sites or applications for the Web, this book is an absolute must"
   },
     {
       "author": "David Herman",
-      "imageLink": "/assets/images/start-book-cover.jpg",
+      "imageLink": "./assets/images/start-book-cover.jpg",
       "title": "Effective JavaScript: 68 Specific Ways to Harness the Power of JavaScript",
       "price": 22,
       "description": "Effective JavaScript is organized around 68 proven approaches for writing better JavaScript, backed by concrete examples. You’ll learn how to choose the right programming style for each project, manage unanticipated problems, and work more successfully with every facet of JavaScript programming from data structures to concurrency"
     },
     {
       "author": "David Flanagan",
-      "imageLink": "/assets/images/start-book-cover.jpg",
+      "imageLink": "./assets/images/start-book-cover.jpg",
       "title": "JavaScript: The Definitive Guide",
       "price": 40,
       "description": "This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today's Web 2.0 applications. This book is both an example-driven programmer's guide and a keep-on-your-desk reference, with new chapters that explain everything you need to know to get the most out of JavaScript"
@@ -34,7 +34,7 @@ tagCreator('header', 'header', 'body');
 
 //create the header block
 tagCreator('img', 'logo', '.header')
-document.querySelector('.logo').src = '/assets/images/logo.jpg'
+document.querySelector('.logo').src = './assets/images/logo.jpg'
 tagCreator('h1', 'h1', '.header')
 document.querySelector('.h1').textContent = 'Welcome to the book shop!'
 
@@ -48,14 +48,14 @@ tagCreator('h2', 'shopping-cart-title', '.shopping-cart');
 document.querySelector('.shopping-cart-title').textContent = 'These are the books you want to buy:';
 tagCreator('h2', 'shopping-cart-total', '.shopping-cart');  
 document.querySelector('.shopping-cart-total').textContent = 'This is how much they cost:';
-
+//create the order button
 tagCreator('button', 'button-confirm-order', '.shopping-cart');  
 document.querySelector('.button-confirm-order').textContent = 'Confirm order';
+tagCreator('include', 'shopping-cart-form', '.shopping-cart');
 
 //create the footer
 tagCreator('footer', 'footer', 'body')
 //fill in the footer
-
 
 
 
@@ -107,3 +107,30 @@ for (let [index, buttonElem] of buttonCloseArray.entries()) {
     })
 }
 
+//make the button create the checkout form
+const buttonCheckout = document.querySelectorAll('.button-confirm-order');
+buttonCheckout.addEventListener('click', () => {
+    const formLink = './form.html'
+    document.querySelectorAll('.shopping-cart-form').src = formLink;
+})
+
+
+//form management
+
+// const form = document.querySelector('form');
+// const fname = document.getElementById('fname');
+// const lname = document.getElementById('lname');
+
+// const form = document.querySelector('form');
+// const fname = document.getElementById('fname');
+// const lname = document.getElementById('lname');
+// const lname = document.getElementById('pencil');
+
+// const para = document.querySelector('p'); // the future comment line!
+
+// const form = document.querySelector('.form');
+
+// form.addEventListener('submit', () => {
+//     const checkBox = document.getElementById('gift').checked
+//     console.log(checkBox)
+// })
